@@ -5,12 +5,17 @@ from roboflow import Roboflow
 import shutil
 from ultralytics import YOLO
 import os
+from dotenv import load_dotenv
 
 # Set the environment variable
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
+# Read api key from .env file
+load_dotenv()
+ROBOFLOW_API_KEY = os.getenv("ROBOFLOW_API_KEY")
+
 # Load dataset from Roboflow
-rf = Roboflow(api_key="Y38Baz6W2SuXGnBkDb2l")
+rf = Roboflow(api_key=ROBOFLOW_API_KEY)
 project = rf.workspace("tuomari").project("face-detection-ynmgf")
 version = project.version(1)
 dataset = version.download("yolov8")

@@ -2,3 +2,4 @@ __pycache__
 .venv
 models/yolov8n.pt
 output/*
+.env

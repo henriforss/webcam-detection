@@ -13,3 +13,5 @@ Trained - but not very extensively - model is `models/best.pt`.
 Start by running `python main.py`.
 
 Stop streaming by pressing `q`.
+
+Set up API key in `.env`.
