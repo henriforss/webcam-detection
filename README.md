@@ -14,4 +14,4 @@ Start by running `python main.py`.
 
 Stop streaming by pressing `q`.
 
-Set up API key in `.env`.
+Set up API key in `.env` (needed for training new models).
